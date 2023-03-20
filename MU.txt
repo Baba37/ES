@@ -1,0 +1,290 @@
+Es practical
+ 1 bit binary counter up
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+unsigned int i;
+for(i=0;i<=255;i++)
+{
+P1=i;
+delay();
+}
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+--------------------------------
+
+2. 8bit binary counter down
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+unsigned int i;
+for(i=255;i>=0;i--)
+{
+P1=i;
+delay();
+}
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+----------------------------
+
+3.atiernate leds on and off
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+P1=0x00;
+delay();
+P1=0x0FF;
+delay();
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+------------------------------
+
+4. flashing of leds
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+P1=0x0AA;
+delay();
+P1=0x55;
+delay();
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+-----------------------------------------------
+
+5.single LEDS right to left scrolling
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+P1=0x01;
+delay();
+P1=0x02;
+delay();
+P1=0x04;
+delay();
+P1=0x08;
+delay();
+P1=0x10;
+delay();
+P1=0x20;
+delay();
+P1=0x40;
+delay();
+P1=0x80;
+delay();
+
+
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+-----------------------------------------------
+
+6.single LED scrolling( left to right)
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+P2=0x80;
+delay();
+P2=0x40;
+delay();
+P2=0x20;
+delay();
+P2=0x10;
+delay();
+P2=0x08;
+delay();
+P2=0x04;
+delay();
+P2=0x02;
+delay();
+P2=0x01;
+delay();
+
+
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+------------------------------------------
+
+
+7.for opposite LED scrolling
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+P1=0x81;
+delay();
+P1=0x42;
+delay();
+P1=0x24;
+delay();
+P1=0x18;
+delay();
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+------------------------------------------
+
+8.alternate nibble on and off
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+P2=0x0F0;
+delay();
+P2=0x0F;
+delay();
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+-------------------------------------
+
+9.ramp waveform generation
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+unsigned int x;
+for(x=0;x<=255;x++)
+{
+P1=x;
+delay();
+}
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+------------------------------------
+
+10.triangular wave forma
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+unsigned int x;
+for(x=0;x<=255;x++)
+{
+P1=x;
+delay();
+}
+for(x=255;x>=0;x--)
+{
+P1=x;
+delay();
+}
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+---------------------------------------
+
+11.square waveform generation
+#include<reg51.h>
+#include<standard.h>
+void delay();
+void main()
+{
+while(1)
+{
+P1=0x00;
+delay();
+P1=0x0FF;
+delay();
+}
+}
+void delay()
+{
+unsigned int l,k;
+for(l=0;l<1000;l++)
+for(k=0;k<1275;k++);
+}
+
+
+
